@@ -101,8 +101,8 @@
                                 class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
                         </button>
                     </div>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-
+                   
+                    @include("inc.menu")
                     <!-- .navbar-collapse -->
                 </div>
                 <!-- .container -->
