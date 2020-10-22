@@ -7,7 +7,7 @@
     <title>TechNews - HTML and CSS Template</title>
 
 
-    <link href="assets/img/favicon.png" rel=icon>
+    <link href="{{ asset('assets/img/favicon.png') }}" rel=icon>
     <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,500' rel='stylesheet' type='text/css'>
     @yield("seo")
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -22,6 +22,7 @@
 <body id="page-top" data-spy="scroll" data-target=".navbar">
 
 @yield("content")
+@yield("single")
 
 
 <script src="{{ asset('assets/js/jquery-2.1.4.min.js') }}"></script>

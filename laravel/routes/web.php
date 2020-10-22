@@ -54,5 +54,9 @@ route::post("/showresult",function(request $req){
 
 route::get("/index",function(){
 	return view("guest.index");
+});
+
+route::get("/single",function(){
+	return view("guest.single");
 
 });
