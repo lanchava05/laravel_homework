@@ -1,6 +1,7 @@
 @extends("layout.main")
 
 @section("content")
+
 <div id="main-wrapper">
 
 <div id="preloader">
@@ -103,11 +104,11 @@
                     </div>
                    
                     @include("inc.menu")
-                    <!-- .navbar-collapse -->
+
                 </div>
-                <!-- .container -->
+
             </nav>
-            <!-- .nav -->
+
         </div>
         <!-- .navigation-section -->
     </div>
@@ -1518,25 +1519,14 @@
         </div>
     </div>
 </div>
-<!-- .uc-mobile-menu -->
+
 
 </div>
-<!-- #main-wrapper -->
-
-<!-- jquery Core-->
-<script src="assets/js/jquery-2.1.4.min.js"></script>
-
-<!-- Bootstrap -->
-<script src="assets/js/bootstrap.min.js"></script>
-
-<!-- Theme Menu -->
-<script src="assets/js/mobile-menu.js"></script>
-
-<!-- Owl carousel -->
-<script src="assets/js/owl.carousel.min.js"></script>
-
-<!-- Theme Script -->
-<script src="assets/js/script.js"></script>
 
 
+
+@endsection
+
+@section("seo")
+    <meta property ="og:title" content="hi">
 @endsection
