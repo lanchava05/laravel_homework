@@ -10,53 +10,35 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-use Illuminate\Http\Request;
 
 
+/*
 Route::get('/', function () {
-    return view('welcome');
-});
+    return App\Posts::get();
+    
+});*/
+Route::get("/","PostsController@index");
+Route::get("/posts/create","PostsController@create");
+Route::post("/posts/store","PostsController@store")->name("storeposts");
 
-Route::get("/testroute",function(){
 
+Route::get("/formtosendpostmethod",function(){
 	return view("guest.form");
-});
+})->name("toreirect");
 
-//route::post("/testpost",function(Request $req ){
-	//$data=[
-		//["name"=>$req->post()['name'],]
+Route::get("/admin","ProductsController@index")->name("adminindex");
+Route::get("/admin/create","ProductsController@create")->name("admincreate");
 
-	//];
-	//return view("guest.table",["newdata"=>$data]);
-//})->name("testpostroute");
+Route::get("/admin/show/{id}","ProductsController@show")->name("adminshow");
 
 
+Route::get("/admin/edit/{id}","ProductsController@edit")->name("adminedit");
 
-route::get("/enter",function(){
-	return view("homework.main");
-});
-route::post("/showresult",function(request $req){
-	$data=[
-		[
-			"name"=>$req->post()['name'],
-			"lastname"=>$req->post()['lastname'],
-			"address"=>$req->post()['address'],
-			"bio"=>$req->post()['bio'],
-			"birthdate"=>$req->post()['birthdate'],
-		],
-
-		
-	];
+Route::post("/admin/store","ProductsController@store")->name("adminstore");
+Route::post("/admin/update","ProductsController@update")->name("adminupdate");
 
 
-	return view("/homework.showresults",["dataresult"=>$data]);
-})->name("getresult");
+Route::post("/admin/delete","ProductsController@delete")->name("admindelete");
 
-route::get("/index",function(){
-	return view("guest.index");
-});
 
-route::get("/single",function(){
-	return view("guest.single");
-
-});
+Route::post("/admin/store/comments","ProductsController@store_comment")->name("store_comment");
